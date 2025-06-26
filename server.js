@@ -52,7 +52,7 @@ app.post('/api/register', async (req, res) => {
     );
     res.status(201).json(result.rows[0]);
   } catch (err) {
-    res.status(500).json({ error: 'Lỗi khi đăng ký member' });
+    res.status(500).json({ error: 'Lỗi khi đăng ký member' + err });
   }
 });
 
