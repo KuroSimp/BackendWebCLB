@@ -14,7 +14,7 @@ app.get('/api/members', async (req, res) => {
   }
 });
 
-app.post('/api/members', async (req, res) => {
+app.post('/api/register', async (req, res) => {
   const { name, email, phone, reason } = req.body;
   if (!name || !email || !phone || !reason) {
     return res.status(400).json({ error: 'Vui lòng nhập đầy đủ thông tin' });
