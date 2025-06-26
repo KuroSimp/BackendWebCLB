@@ -1,5 +1,7 @@
 const express = require('express');      // ← thêm dòng này
-const app = express();                   // ← và dòng này
+const app = express();      
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.json());                // ← nếu muốn dùng body json
 require('dotenv').config();
